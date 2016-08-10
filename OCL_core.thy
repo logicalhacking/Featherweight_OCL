@@ -557,7 +557,7 @@ text{*
   the strict extension of the logical
   equality:
 *}
-defs   StrictRefEq\<^sub>B\<^sub>o\<^sub>o\<^sub>l\<^sub>e\<^sub>a\<^sub>n[code_unfold] :
+defs (overloaded)   StrictRefEq\<^sub>B\<^sub>o\<^sub>o\<^sub>l\<^sub>e\<^sub>a\<^sub>n[code_unfold] :
       "(x::('\<AA>)Boolean) \<doteq> y \<equiv> \<lambda> \<tau>. if (\<upsilon> x) \<tau> = true \<tau> \<and> (\<upsilon> y) \<tau> = true \<tau>
                                     then (x \<triangleq> y)\<tau>
                                     else invalid \<tau>"
@@ -949,7 +949,7 @@ lemma OclOr_null1[simp]: "\<And>\<tau>. X \<tau> \<noteq> true \<tau> \<Longrigh
   apply(auto simp:true_def false_def bot_fun_def bot_option_def null_fun_def null_option_def
              split: option.split option.split_asm)
   apply (metis (full_types) bool.simps(3) bot_option_def null_is_valid null_option_def)
-by (metis (full_types) bool.simps(3) option.distinct(1) the.simps)
+by (metis (full_types) bool.simps(3) option.distinct(1) option.sel)
 
 lemma OclOr_null2[simp]: "\<And>\<tau>. X \<tau> \<noteq> true \<tau> \<Longrightarrow> X \<tau> \<noteq> bot \<tau> \<Longrightarrow> (X or null) \<tau> = null \<tau>"
   by(simp add: OclOr_commute)
@@ -1127,9 +1127,9 @@ apply(simp add:invalid_def null_def null_fun_def)
 by(auto simp: OclValid_def defined_def false_def true_def  bot_fun_def null_fun_def
         split:split_if_asm)
 
-lemmas foundation17 = foundation16[THEN iffD1,standard]
+lemmas foundation17 = foundation16[THEN iffD1]
 (* correcter rule; the previous is deprecated *)
-lemmas foundation17' = foundation16'[THEN iffD1,standard]
+lemmas foundation17' = foundation16'[THEN iffD1]
 
 lemma foundation18: "\<tau> \<Turnstile> (\<upsilon> X) = (X \<tau> \<noteq> invalid \<tau>)"
 by(auto simp: OclValid_def valid_def false_def true_def bot_fun_def invalid_def
@@ -1141,7 +1141,7 @@ by(auto simp: OclValid_def valid_def false_def true_def bot_fun_def
         split:split_if_asm)
 
 
-lemmas foundation19 = foundation18[THEN iffD1,standard]
+lemmas foundation19 = foundation18[THEN iffD1]
 
 lemma foundation20 : "\<tau> \<Turnstile> (\<delta> X) \<Longrightarrow> \<tau> \<Turnstile> \<upsilon> X"
 by(simp add: foundation18 foundation16 invalid_def)

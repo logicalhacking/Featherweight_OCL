@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,openright,twoside,abstracton]{scrreprt}
+\documentclass[fontsize=11pt,paper=a4,open=right,twoside,abstract=true]{scrreprt}
 \usepackage{fixltx2e}
 \usepackage{isabelle,isabellesym}
 \usepackage[nocolortable, noaclist]{hol-ocl-isar}
@@ -11,7 +11,7 @@
 \usepackage{tabu}
 \usepackage[]{mathtools}
 \usepackage{prooftree}
-\usepackage{aeguill}
+\usepackage[english]{babel}
 \usepackage[pdfpagelabels, pageanchor=false, plainpages=false]{hyperref}
 % \usepackage[draft]{fixme}
 
@@ -55,7 +55,7 @@
   {\operatorname{state}}%
   {\operatorname{\mathit{state}}(#1)}%
 }
-\newcommand{\mocl}[1]{\text{\inlineocl{#1}}}
+\newcommand{\mocl}[1]{\text{\inlineocl|#1|}}
 \DeclareMathOperator{\TCnull}{null}
 \DeclareMathOperator{\HolNull}{null}
 \DeclareMathOperator{\HolBot}{bot}
