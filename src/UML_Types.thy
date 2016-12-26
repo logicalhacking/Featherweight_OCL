@@ -600,8 +600,8 @@ fun disp_msg title msg status = title ^ ": '" ^ msg ^ "' " ^ status
 fun lemma msg specification_theorem concl in_local thy =
   SOME
     (in_local (fn lthy =>
-           specification_theorem Thm.theoremK NONE (K I) (@{binding ""}, []) [] [] 
-             (Element.Shows [((@{binding ""}, []),[(concl lthy, [])])])
+           specification_theorem Thm.theoremK NONE (K I) Binding.empty_atts [] [] 
+             (Element.Shows [(Binding.empty_atts, [(concl lthy, [])])])
              false lthy
         |> Proof.global_terminal_proof
              ((Method.Combinator ( Method.no_combinator_info
@@ -616,9 +616,9 @@ fun outer_syntax_command command_spec theory in_local =
   Outer_Syntax.command command_spec "assert that the given specification is true"
     (Parse.term >> (fn elems_concl => theory (fn thy =>
       case
-        lemma "code_unfold" Specification.theorem
+        lemma "code_unfold" (Specification.theorem true)
           (fn lthy => 
-            let val expr = Value.value lthy (Syntax.read_term lthy elems_concl)
+            let val expr = Value_Command.value lthy (Syntax.read_term lthy elems_concl)
                 val thy = Proof_Context.theory_of lthy
                 open HOLogic in
             if Sign.typ_equiv thy (fastype_of expr, @{typ "prop"}) then
@@ -629,7 +629,7 @@ fun outer_syntax_command command_spec theory in_local =
           thy
       of  NONE => 
             let val attr_simp = "simp" in
-            case lemma attr_simp Specification.theorem_cmd (K elems_concl) in_local thy of
+            case lemma attr_simp (Specification.theorem_cmd true) (K elems_concl) in_local thy of
                NONE => raise (ERROR "Assertion failed")
              | SOME thy => 
                 (writeln (disp_msg "OK" "simp" "finished the normalization");
@@ -637,13 +637,7 @@ fun outer_syntax_command command_spec theory in_local =
             end
         | SOME thy => thy)))
 
-fun in_local decl thy =
-  thy
-  |> Named_Target.init ""
-  |> decl
-  |> Local_Theory.exit_global
-
-val () = outer_syntax_command @{command_keyword Assert} Toplevel.theory in_local 
+val () = outer_syntax_command @{command_keyword Assert} Toplevel.theory Named_Target.theory_map
 val () = outer_syntax_command @{command_keyword Assert_local} (Toplevel.local_theory NONE NONE) I
 *}
 (*>*)

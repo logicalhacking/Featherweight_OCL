@@ -65,4 +65,3 @@ session Featherweight_OCL (AFP) in "src" = HOL +
     "root.bib"
     "root.tex"
     "FOCL_Syntax.tex"
-
