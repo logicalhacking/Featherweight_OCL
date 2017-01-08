@@ -1,0 +1,86 @@
+To cite the use of this formal theory, please use
+
+  Achim D. Brucker, Frédéric Tuong, and Burkhart Wolff. Featherweight
+  OCL: A Proposal for a Machine-Checked Formal Semantics for OCL
+  2.5. In Archive of Formal Proofs,
+  2014. http://www.isa-afp.org/entries/Featherweight_OCL.shtml, Formal
+  proof development
+
+A BibTeX entry for LaTeX users is
+
+@Article{ brucker.ea:featherweight:2014,
+      abstract  = {The Unified Modeling Language (UML) is one of the
+                  few modeling languages that is widely used in
+                  industry. While UML is mostly known as diagrammatic
+                  modeling language (e.g., visualizing class models),
+                  it is complemented by a textual language, called
+                  Object Constraint Language (OCL). OCL is based on a
+                  three-valued logic that turns UML into a formal
+                  language. Unfortunately the semantics of this
+                  specification language, captured in the "Annex A" of
+                  the OCL standard, leads to different interpretations
+                  of corner cases. We formalize the core of OCL:
+                  denotational definitions, a logical calculus and
+                  operational rules that allow for the execution of
+                  OCL expressions by a mixture of term rewriting and
+                  code compilation. Our formalization reveals several
+                  inconsistencies and contradictions in the current
+                  version of the OCL standard. Overall, this document
+                  is intended to provide the basis for a
+                  machine-checked text "Annex A" of the OCL standard
+                  targeting at tool implementors.},
+       author	= {Achim D. Brucker and Fr{\'e}d{\'e}ric Tuong and Burkhart Wolff},
+       file	= {https://www.brucker.ch/bibliography/download/2014/brucker.ea-featherweight-outline-2014.pdf},
+       filelabel= {Outline},
+       issn	= {2150-914x},
+       journal	= {Archive of Formal Proofs},
+       month	= {jan},
+       note	= {\url{http://www.isa-afp.org/entries/Featherweight_OCL.shtml}, Formal proof development},
+       pdf	= {https://www.brucker.ch/bibliography/download/2014/brucker.ea-featherweight-2014.pdf},
+       title	= {Featherweight OCL: A Proposal for a Machine-Checked Formal Semantics for OCL 2.5},
+       url	= {https://www.brucker.ch/bibliography/abstract/brucker.ea-featherweight-2014},
+       year	= {2014},
+}
+
+
+An overview of the formalization is given in:
+
+  Achim D. Brucker and Burkhart Wolff. Featherweight OCL: A study for
+  the consistent semantics of OCL 2.3 in HOL. In Workshop on OCL and
+  Textual Modelling (OCL 2012). , pages 19-24, 2012. The semantics for
+  the Boolean operators proposed in this paper was adopted by the OCL
+  2.4 standard.
+
+A BibTeX entry for LaTeX users is
+
+@InProceedings{ brucker.ea:featherweight:2012,
+    abstract = {At its origins, OCL was conceived as a strict
+                semantics for undefinedness, with the exception of the
+                logical connectives of type Boolean that constitute a
+                three-valued propositional logic. Recent versions of
+                the OCL standard added a second exception element,
+                which, similar to the null references in programming
+                languages, is given a non-strict semantics.\\\\In this
+                paper, we report on our results in formalizing the
+                core of OCL in higher-order logic (HOL). This
+                formalization revealed several inconsistencies and
+                contradictions in the current version of the OCL
+                standard. These inconsistencies and contradictions are
+                reflected in the challenge to define and implement OCL
+                tools (e.g., interpreters, code-generators, or theorem
+                provers) in a uniform manner.},
+
+    author   = {Achim D. Brucker and Burkhart Wolff},
+    booktitle= {Workshop on OCL and Textual Modelling (OCL 2012)},
+    doi      = {10.1145/2428516.2428520},
+    isbn     = {978-1-4503-1799-3},
+    keywords = {OCL, HOL-OCL, formal semantics},
+    note     = {The semantics for the Boolean operators proposed in this paper
+                was adopted by the OCL 2.4 standard.},
+    pages    = {19--24},
+    pdf      = {https://www.brucker.ch/bibliography/download/2012/brucker.ea-featherweight-2012.pdf},
+    talk     = {talk:brucker.ea:featherweight:2012},
+    title    = {Featherweight OCL: A study for the consistent semantics of OCL 2.3 in HOL},
+    url      = {https://www.brucker.ch/bibliography/abstract/brucker.ea-featherweight-2012},
+    year     = {2012},
+}

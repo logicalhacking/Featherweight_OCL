@@ -15,3 +15,15 @@ submitted (as an update of the UPF entry) at a later stage.
 
 ## License
 This project is licensed under a 3-clause BSD-style license.
+
+## Publications
+* Achim D. Brucker, Frédéric Tuong, and Burkhart Wolff. Featherweight
+  OCL: A Proposal for a Machine-Checked Formal Semantics for OCL 2.5. In
+  Archive of Formal Proofs, 2014. 
+  http://www.isa-afp.org/entries/Featherweight_OCL.shtml, Formal proof 
+  development.
+
+* Achim D. Brucker and Burkhart Wolff. Featherweight OCL: A study for 
+  the consistent semantics of OCL 2.3 in HOL. In Workshop on OCL and 
+  Textual Modelling (OCL 2012), pages 19-24, 2012. 
+  https://www.brucker.ch/bibliography/abstract/brucker.ea-featherweight-2012
