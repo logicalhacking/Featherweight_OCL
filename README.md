@@ -1,4 +1,5 @@
 # Featherweight OCL: A Proposal for a Machine-Checked Formal Semantics for OCL 2.5
+
 This git repository contains a local mirror of
 [Featherweight OCL](https://www.isa-afp.org/entries/Featherweight_OCL.shtml)
 entry of the
@@ -9,14 +10,17 @@ may contain extensions (i.e., a development version) that may be
 submitted (as an update of the UPF entry) at a later stage.
 
 ## Authors
+
 * [Achim D. Brucker](http://www.brucker.ch/)
 * Frédéric Tuong 
 * [Burkhart Wolff](https://www.lri.fr/~wolff/)
 
 ## License
+
 This project is licensed under a 3-clause BSD-style license.
 
 ## Publications
+
 * Achim D. Brucker, Frédéric Tuong, and Burkhart Wolff. Featherweight
   OCL: A Proposal for a Machine-Checked Formal Semantics for OCL 2.5. In
   Archive of Formal Proofs, 2014. 
