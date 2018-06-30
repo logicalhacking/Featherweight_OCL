@@ -19,6 +19,8 @@ submitted (as an update of the UPF entry) at a later stage.
 
 This project is licensed under a 3-clause BSD-style license.
 
+SPDX-License-Identifier: BSD-3-Clause
+
 ## Publications
 
 * Achim D. Brucker, Frédéric Tuong, and Burkhart Wolff. Featherweight
