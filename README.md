@@ -25,7 +25,7 @@ SPDX-License-Identifier: BSD-3-Clause
 
 The master git repository for this project is hosted by the [Software
 Assurance & Security Research Team](https://logicalhacking.com) at
-https://git.logicalhacking.com//afp-mirror/Featherweight_OCL
+<https://git.logicalhacking.com//afp-mirror/Featherweight_OCL>.
 
 ## Publications
 
