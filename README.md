@@ -11,8 +11,8 @@ submitted (as an update of the UPF entry) at a later stage.
 
 ## How to build
 
-```
-isabelle build -D Featherweight_OCL
+```console
+achim@logicalhacking:~$ isabelle build -D Featherweight_OCL
 ```
 
 ## Authors
