@@ -18,7 +18,7 @@ isabelle build -D Featherweight_OCL
 ## Authors
 
 * [Achim D. Brucker](http://www.brucker.ch/)
-* [Frédéric Tuong]({https://www.scss.tcd.ie/frederic.tuong/) 
+* [Frédéric Tuong](https://www.scss.tcd.ie/frederic.tuong/) 
 * [Burkhart Wolff](https://www.lri.fr/~wolff/)
 
 ## License
