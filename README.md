@@ -9,6 +9,12 @@ The official AFP releases are tagged. Additionally, this repository
 may contain extensions (i.e., a development version) that may be
 submitted (as an update of the UPF entry) at a later stage.
 
+## How to build
+
+```
+isabelle build -D Featherweight_OCL
+```
+
 ## Authors
 
 * [Achim D. Brucker](http://www.brucker.ch/)
